@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    margin-top: 20px;
+    font-size: 45px;
+    background-color: yellow;
+}
+
+/* Class and ID Selector  */
+
+#first-para{
+    color: antiquewhite;
+    background:red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.para{
+    color: black;
+    background: red;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
