@@ -20,9 +20,33 @@ h2{
 }
 
 .para{
-    color: black;
+    color: wheat;
     background: red;
     text-align: center;
     width: 50%;
     height: 50%;
 }
+
+/* Element Selector  */
+p{
+    margin: 20px 20px;
+    padding: 20px 20px;
+}
+
+/* Universal Selector  */
+*{
+   p{
+    font-size: larger;
+    color: antiquewhite;
+    background-color: aqua;
+   }
+}
+
+/* group Selector */
+h4, h4, p {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(92, 10, 255);
+    background-color: beige;
+    font-size: 30px;
+  }
