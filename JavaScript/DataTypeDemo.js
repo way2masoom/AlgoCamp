@@ -5,4 +5,24 @@ let productPrice=155000;
 let productDiscount=15;
 console.log("hello");
 
+//Boolean datatype
 let isAvailable=true;
+
+// Special number -0
+let minusZero=-0;
+console.log(minusZero);
+
+//Undefine Datatype
+let x;
+console.log(x);
+
+// Null dataType
+let y=null;
+console.log(y);
+
+// Big Integer
+console.log(veryBigNumber);
+let veryBigNumber=78987890987654322345678909876543345678900987657890;
+
+console.log(veryBigNumber2);
+let veryBigNumber2=78987890987654322345678909876543345678900987657890n;
