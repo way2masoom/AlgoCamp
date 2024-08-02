@@ -6,3 +6,4 @@ while (i <=n) {
     console.log(i);
     i += 1;
 }
+console.log("End");
