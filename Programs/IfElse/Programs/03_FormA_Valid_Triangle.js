@@ -3,7 +3,7 @@
 
 let a=1,b=1,c=3;
 
-if(a+b>=c && a+c>=b && b+c>=c){
+if(a+b>=c && a+c>=b && b+c>=a){
     console.log("yes we can form the Triangle");
 }else{
     console.log("No we can't form the triangle");
