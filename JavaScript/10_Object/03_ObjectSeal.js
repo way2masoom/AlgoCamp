@@ -23,3 +23,7 @@ console.log(product); // this will still print  - {name: 'Iphone 14 Pro', color:
 // updating the key values pair
 product.name="Iphone 15 pro"; // Updating allowed in Sealed object
 console.log(product); // this will print  - {name: 'Iphone 15 pro', color: 'Black', price: 100000, warranty: '2 Year'}
+
+// checking it the product is freeze or sealed
+console.log("Frozen =",Object.isFrozen(product)); // true
+console.log("Sealed =",Object.isSealed(product)); // false
