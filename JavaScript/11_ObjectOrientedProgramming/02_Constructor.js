@@ -47,4 +47,7 @@ class Product {
 
 // Creating an object 
 let iphone = new Product("iPhone 12", 1000, "A high-end smartphone", "Black");
+let samsung=new Product("Samsung Galaxy S21", 900, "A high-end smartphone", "White");
 console.log(iphone);
+console.log(samsung);
+console.log(typeof(Product)); // function;
