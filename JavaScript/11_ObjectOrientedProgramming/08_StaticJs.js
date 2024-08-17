@@ -19,4 +19,4 @@ console.log(obj);
 
 // calling the static variable 
 console.log(obj.x); // it will print Undefine bec. static can't be accessible with Object
-console.log(product); // it will print x:10 bec. It is accessible with class
+console.log(product.x); // it will print x:10 bec. It is accessible with class
