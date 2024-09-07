@@ -33,3 +33,19 @@ const newObj2={Fname:'MD'}
 
 // calling ob2 greet Function using CALL method and with parameters
 obj2.greet.call(newObj2,"Welcome to the Club");
+
+
+// Creating a new Object with more than one Parameters 
+const obj3={
+    Fname:'Laxmi',
+     // Function to display name and passing Parameters
+    greet:function(welcomeMsg,age){
+        console.log(welcomeMsg,`Hello my name is ${this.Fname}`,age);
+    }
+}
+
+// Creating a new 
+const newObj3={Fname:'Mohit'}
+
+// Calling obj3 greet function using CALL method with 2 parameters 
+obj3.greet.call(newObj3,"Welcome To club,","i am 20 years old");
