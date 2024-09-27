@@ -21,8 +21,8 @@ let y=null;
 console.log(y);
 
 // Big Integer
-console.log(veryBigNumber);
 let veryBigNumber=78987890987654322345678909876543345678900987657890;
+console.log(veryBigNumber);
 
-console.log(veryBigNumber2);
 let veryBigNumber2=78987890987654322345678909876543345678900987657890n;
+console.log(veryBigNumber2);

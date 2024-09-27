@@ -7,14 +7,14 @@ let x = true, y = false;
 // Logical AND (&&) Operator
 console.log("Logical AND (x && y):", x && y);
 console.log("Logical AND (x && y):", x && x);
-console.log("Logical AND (x && y):", y && x);
+console.log("Logical AND (y && x):", y && x);
 
 
 
 // Logical OR (||) Operator
 console.log("Logical OR (x || y):", x || y);
-console.log("Logical OR (x || y):", x || x);
-console.log("Logical OR (x || y):", y || y);
+console.log("Logical OR (x || x):", x || x);
+console.log("Logical OR (y || y):", y || y);
 
 // Logical NOT (!) Operator
 console.log("Logical NOT (!x):", !x);
