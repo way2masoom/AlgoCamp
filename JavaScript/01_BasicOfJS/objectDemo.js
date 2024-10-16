@@ -11,6 +11,7 @@ let Social={
     facebook:1000,
     inst:1059,
     x:1366,
+    y:13990,
     linkedin:35883
 
 };

@@ -9,12 +9,12 @@ let product={
 }
 
 // If we need fetch all the unique keys of our object say product
-const keys=Object.keys(product);
-console.log(keys); // [ 'name', 'company', 'color', 'price', 'warranty' ]
+const keysValue=Object.keys(product);
+console.log(keysValue); // [ 'name', 'company', 'color', 'price', 'warranty' ]
 
 // if we need to fetch all the available values of our object say product
-const values=Object.values(product);
-console.log("\n",values); // [ 'Iphone', 'Apple', 'Black', 100000, '1 Year' ]
+const productValues=Object.values(product);
+console.log("\n",productValues); // [ 'Iphone', 'Apple', 'Black', 100000, '1 Year' ]
 
 
 // if we need to fetch all the key value pairs of our object say product    
