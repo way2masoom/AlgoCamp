@@ -15,6 +15,10 @@ console.log(!NaN);    // true (NaN is falsy)
 // Rest other are Truthy Values
 console.log(!{}); // false (Object{} is Truthy Value)
 console.log(!"Hello"); // false (String is Truthy Value)
+x="false";
+console.log("False String",!x);
+
+
 console.log(![]);     // false (empty array is truthy)
 
 
