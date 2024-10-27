@@ -15,4 +15,3 @@ f("I am 20 years old"); // 'this' refers to 'newObj', so it prints simran
 
 // Original function remains unchanged
 obj.greet("& I am 20 years"); // 'this' refers to 'obj', so it prints rohit
-dd
