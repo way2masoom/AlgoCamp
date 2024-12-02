@@ -7,4 +7,4 @@ while (i <= n) {
     sum += i;
     i+=1;
 }
-console.log("sum of Number from", i, "To", n, "is =", sum);
+console.log("sum of Number from 1 To 10 is = ", sum);
