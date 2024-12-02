@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM part 2</title>
+</head>
+<body>
+    <body style="background-color: #212121; color:#ffff;">
+        <div class="parent">
+            <div class="class">Monday</div>
+            <div class="class">Tuesday</div>
+            <div class="class">Wednesday</div>
+            <div class="class">Thursday</div>
+        </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    //console.log(parent.children[1].innerHTML)
+    //console.log(parent.children[2].innerHTML)
+
+    // Iterative loop through the days
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML); // this will print all the days
+    }
+
+    parent.children[1].style.color="red";
+    
+</script>
+</html>
