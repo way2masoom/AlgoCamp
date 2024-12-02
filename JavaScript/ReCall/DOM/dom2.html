@@ -8,25 +8,33 @@
 <body>
     <body style="background-color: #212121; color:#ffff;">
         <div class="parent">
-            <div class="class">Monday</div>
-            <div class="class">Tuesday</div>
-            <div class="class">Wednesday</div>
-            <div class="class">Thursday</div>
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
         </div>
 </body>
 <script>
     const parent=document.querySelector('.parent');
-    console.log(parent);
-    console.log(parent.children);
+    //console.log(parent);
+    //console.log(parent.children);
     //console.log(parent.children[1].innerHTML)
     //console.log(parent.children[2].innerHTML)
 
     // Iterative loop through the days
-    for(let i=0;i<parent.children.length;i++){
-        console.log(parent.children[i].innerHTML); // this will print all the days
-    }
+    //for(let i=0;i<parent.children.length;i++){
+       // console.log(parent.children[i].innerHTML); // this will print all the days
+    //}
 
-    parent.children[1].style.color="red";
+    //parent.children[1].style.color="red"; 
+    //console.log(parent.firstElementChild);
+    //console.log(parent.lastElementChild);
+
+    const dayOne=document.querySelector('.day').innerHTML
+    //console.log(dayOne)
+    // console.log(dayOne.parentElement)
+
+    console.log("NODES: ",parent.childNodes);
     
-</script>
+</script> 
 </html>
