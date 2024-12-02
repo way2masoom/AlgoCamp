@@ -1,4 +1,4 @@
-// Creating a function to store unLimitied Function
+// Creating a function to store Unlimited Function
 
 function fun(... values){
     //... values represent REST parameters
