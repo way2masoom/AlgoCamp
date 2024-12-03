@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom 4</title>
+    </head>
+    <body style="background-color: #212121; color:#ffff">
+        <ul class="language">
+            <li>JavaScript</li>
+        </ul>
+    </body>
+    <script>
+    // Removing the bullets pint from li
+    const listStyle=document.querySelector('.language')
+    listStyle.style.listStyle='none'
+
+    // changing the color
+    listStyle.style.color='red';
+
+    // JavaScript code here
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li);
+    }
+
+    // calling the function
+    addLanguage("Python"); // this will display anther List item in the page
+    addLanguage("Java");
+    
+    // Creating a new approach for the above code
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li)
+
+        li.style.color="green";
+    }
+
+    addOptiLanguage("Cpp");
+    addOptiLanguage("TypeScript");
+
+
+    // Editing the values
+    const secondLang=document.querySelector("li:nth-child(2)")
+   // secondLang.innerHTML='ruby'
+
+    // another way to edit the code
+    const newLi=document.createElement('li')
+    newLi.textContent="Mojo";
+    secondLang.replaceWith(newLi)
+    newLi.style.color="yellow";
+
+    // edit 
+    const firstLang=document.querySelector('li:first-child');
+    firstLang.outerHTML='<li>TypeScript</li>' // changed 'JaveScript' into 'TypeScript'
+
+    // Removing the values
+    const lastLang=document.querySelector('li:last-child');
+    lastLang.remove(); // removed 'TypedScript'
+
+</script>
+</html>
