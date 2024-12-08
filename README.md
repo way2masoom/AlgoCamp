@@ -52,6 +52,7 @@ AlgoCamp is a comprehensive collection of algorithms, data structures, and proje
 
 
 
+
 Projects Showcase 🎨
 Explore interactive beginner projects that enhance learning through hands-on coding:
 
@@ -66,7 +67,3 @@ Preview :  [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/A
 
 Guess The Number:
 Preview :  [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/AlgoCamp/blob/master/Projects/GuessTheNumber/index.html)
-
-A fun game where the player guesses a randomly generated number within a range.
-Preview the Project
-
