@@ -55,17 +55,16 @@ Projects Showcase 🎨
 Explore interactive beginner projects that enhance learning through hands-on coding:
 
 Color Changer:
+Preview : Link
 
-A simple web app that allows users to dynamically change the background color of a webpage.
-Preview the Project
 BMI Index Calculator:
+Preview : Link
 
-A calculator that computes Body Mass Index based on user input (weight and height).
-Preview the Project
 Digital Clock:
+Preview : Link
 
-A digital clock displaying the current time with live updates.
-Preview the Project
+Guess The Number:
+Preview : Link
 Guess The Number:
 
 A fun game where the player guesses a randomly generated number within a range.
