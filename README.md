@@ -51,21 +51,21 @@ AlgoCamp is a comprehensive collection of algorithms, data structures, and proje
 └── README.md
 
 
+
 Projects Showcase 🎨
 Explore interactive beginner projects that enhance learning through hands-on coding:
 
 Color Changer:
-Preview : Link
+Preview : [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/AlgoCamp/blob/master/Projects/Color-Changer/index.html)
 
 BMI Index Calculator:
-Preview : Link
+Preview : [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/AlgoCamp/blob/master/Projects/BMI_Index_Calculator/index.html)
 
 Digital Clock:
-Preview : Link
+Preview :  [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/AlgoCamp/blob/master/Projects/DigitalClock/inde.html)
 
 Guess The Number:
-Preview : Link
-Guess The Number:
+Preview :  [Link](https://htmlpreview.github.io/?https://github.com/way2masoom/AlgoCamp/blob/master/Projects/GuessTheNumber/index.html)
 
 A fun game where the player guesses a randomly generated number within a range.
 Preview the Project
