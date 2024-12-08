@@ -49,3 +49,25 @@ AlgoCamp is a comprehensive collection of algorithms, data structures, and proje
 │       ├── styles.css
 │       └── script.js
 └── README.md
+
+
+Projects Showcase 🎨
+Explore interactive beginner projects that enhance learning through hands-on coding:
+
+Color Changer:
+
+A simple web app that allows users to dynamically change the background color of a webpage.
+Preview the Project
+BMI Index Calculator:
+
+A calculator that computes Body Mass Index based on user input (weight and height).
+Preview the Project
+Digital Clock:
+
+A digital clock displaying the current time with live updates.
+Preview the Project
+Guess The Number:
+
+A fun game where the player guesses a randomly generated number within a range.
+Preview the Project
+
