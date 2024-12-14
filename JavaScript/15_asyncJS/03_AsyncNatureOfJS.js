@@ -6,6 +6,10 @@ console.log("Start");
 
 setTimeout(function f() {
     console.log("This is an asynchronous message");
-}, 3000);
+}, 100);
 
+let x = 0;
+for (let i = 0; i < 100000000; i++) {
+    x = x + 1;
+}
 console.log("End");
