@@ -29,37 +29,33 @@ const pr = new Promise(function exes(res, rej) {
 
         if (randomNumber % 2 === 0) {
             // randomNumber is even
-            res();
+            res(randomNumber);
         } else {
             // randomNumber is odd 
-            rej();
+            rej(randomNumber);
         }
     }, 3000);  // time of 1 sec
 });
 
 
 // Main code
-pr.then(function f() {
-    console.log("Executing f")
-}, function g() {
-    console.log("Executing g")
+pr.then(function f(v) {
+    console.log("Executing f", v)
+}, function g(v) {
+    console.log("Executing g", v)
 });
 
-pr.then(function h() {
-    console.log("Executing h")
-}, function i() {
-    console.log("Executing i")
+pr.then(function h(v) {
+    console.log("Executing h", v)
+}, function i(v) {
+    console.log("Executing i", v)
 });
 
 
 // to make JS main thread BG
 for (let i = 0; i < 1000000000; i++) {
-
+    // something
 }
-for (let i = 0; i < 1000000000; i++) {
-
-}
-
 console.log("End");
 
 
