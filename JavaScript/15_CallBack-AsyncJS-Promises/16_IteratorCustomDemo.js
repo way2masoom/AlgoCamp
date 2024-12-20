@@ -6,16 +6,17 @@
 // Custom iterator function
 function fetchNextElement(arr) {
     let index = 0;
-    return function next() {
+    function next() {
         // some logic
         if (index > arr.length) {
-            return undefined;
+            return { values: undefined, done: true };
         }
 
         const newElement = arr[index];
         index++;
-        return newElement;
+        return { value: newElement, done: false };
     }
+    return{next}
 }
 
 // How program work
@@ -32,12 +33,14 @@ function fetchNextElement(arr) {
 // Example usage
 const myArray = [1, 2, 3, 4, 5];
 const autoFeather = fetchNextElement(myArray);
-console.log(autoFeather());
-console.log(autoFeather());
+console.log(autoFeather.next());
+console.log(autoFeather.next());
+console.log(autoFeather.next());
+console.log(autoFeather.next());
 
 for (let i = 0; i < 1000000000; i++) {
     // some operation 
 }
-console.log(autoFeather());
+console.log(autoFeather.next());
 
 
