@@ -13,7 +13,7 @@
 console.log("Start");
 
 // Simulating Function for Downloading Data
-function download(ur) {
+function download(url) {
     return new Promise(function exe(res, rej) {
         console.log("Downloading data from", url);
         setTimeout(function () {
