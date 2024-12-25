@@ -18,10 +18,30 @@ function addTodoLocalStorage(todoText) {
 function appendTodoInHtml(todoText) {
     const todoList = document.getElementById("todoList");
 
-    const todo = document.createElement("li");
-    todo.textContent = todoText;
+    const todoItem = document.createElement("li");
+    todoItem.textContent = todoText;
 
-    todoList.appendChild(todo);
+    todoItem.classList.add("todoItem");
+
+    // creating some button
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.classList.add("editBtn");
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("deleteBtn");
+
+    const completedBtn = document.createElement("button");
+    completedBtn.textContent = "completed";
+    completedBtn.classList.add("completedBtn");
+
+    // Adding the button to the todo Items List
+    todoItem.appendChild(editBtn)
+    todoItem.appendChild(deleteBtn)
+    todoItem.appendChild(completedBtn)
+
+    todoList.appendChild(todoItem);
 
 
 
@@ -30,7 +50,7 @@ function appendTodoInHtml(todoText) {
 
 // do after loading DOM
 document.addEventListener("DOMContentLoaded", () => {
-   
+
     // todos Input part
     const todoInput = document.getElementById("todoInput");
 

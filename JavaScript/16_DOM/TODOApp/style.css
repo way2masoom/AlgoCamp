@@ -2,6 +2,8 @@
 :root {
     --body-background: #0e0e0f;
     --btn-primary: #5cabff;
+    --btn-secondary:#fffc37;
+    --btn-active:#4a90e2;
 }
 
 * {
@@ -71,4 +73,25 @@ li:hover{
 
 li:last-child {
     border-bottom: none;
+}
+
+
+/* Filter Buttons  */
+.filterBtn{
+   margin: 8px;
+    padding:10px 15px;
+    background-color:var(--btn-secondary) ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.filterBtn:hover{
+    background-color: var(--btn-active);
+}
+
+.todoItem{
+    letter-spacing: 1px;
 }
