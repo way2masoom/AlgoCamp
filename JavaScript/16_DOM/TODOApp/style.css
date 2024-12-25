@@ -48,8 +48,27 @@ h1 {
     cursor: pointer;
 
 }
+
 /* btn after hovering  */
 #addTodo:hover {
     background-color: red;
     color: white;
+}
+
+/* Styling the todoList items  */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid#ddd;
+}
+li:hover{
+    background-color: antiquewhite;
+}
+
+li:last-child {
+    border-bottom: none;
 }

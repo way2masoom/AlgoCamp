@@ -14,13 +14,33 @@ function addTodoLocalStorage(todoText) {
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
+// Function to append intoHTML
+function appendTodoInHtml(todoText) {
+    const todoList = document.getElementById("todoList");
+
+    const todo = document.createElement("li");
+    todo.textContent = todoText;
+
+    todoList.appendChild(todo);
+
+
+
+
+}
+
+// do after loading DOM
 document.addEventListener("DOMContentLoaded", () => {
-    // todos Input part 
+   
+    // todos Input part
     const todoInput = document.getElementById("todoInput");
 
     // button
     const submitButton = document.getElementById("addTodo");
 
+    // TodoList
+    const todoList = document.getElementById("todoList");
+
+    // click event
     submitButton.addEventListener("click", (event) => {
         const todoText = todoInput.value
         // condition to check it's empty or not
@@ -29,8 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             // add the todo to the local storage
             addTodoLocalStorage(todoText);
+            appendTodoInHtml(todoText); // calling the function to Display the Todo List
+            todoInput.value = '';  // to make values empty
         }
     })
+
 
     todoInput.addEventListener("change", (event) => {
         const todoText = event.target.value
@@ -40,7 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // calling the loadTodos function 
-    loadTodos()
-    console.log("Dom content successfully Loaded");
+    const todos = loadTodos()
+
+    todos.todoList.forEach(todo => {
+        const newTodoItem = document.createElement("li");
+        newTodoItem.textContent = todo;
+        todoList.appendChild(newTodoItem);
+    })
 
 }) 
