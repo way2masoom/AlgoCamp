@@ -8,20 +8,29 @@ function loadTodos() {
 }
 
 // creating a function to store the todo text in the local storage
-function addTodoLocalStorage(todoText) {
+function addTodoLocalStorage(todo) {
     const todos = loadTodos(); // get all todo 
-    todos.todoList.push(todoText)
+    todos.todoList.push(todo);
+
     localStorage.setItem("todos", JSON.stringify(todos))
 }
 
 // Function to append intoHTML
-function appendTodoInHtml(todoText) {
+function appendTodoInHtml(todo) {
     const todoList = document.getElementById("todoList");
 
     const todoItem = document.createElement("li");
-    todoItem.textContent = todoText;
 
+    // Making a DIV for the text Items
+    const textDiv = document.createElement("div");
+
+
+    textDiv.textContent = todo.text;
     todoItem.classList.add("todoItem");
+
+    // Making a Wrapper DIV
+    const Wrapper = document.createElement("div");
+    Wrapper.classList.add("todoButtons")
 
     // creating some button
     const editBtn = document.createElement("button");
@@ -37,14 +46,49 @@ function appendTodoInHtml(todoText) {
     completedBtn.classList.add("completedBtn");
 
     // Adding the button to the todo Items List
-    todoItem.appendChild(editBtn)
-    todoItem.appendChild(deleteBtn)
-    todoItem.appendChild(completedBtn)
+    Wrapper.appendChild(editBtn)
+    Wrapper.appendChild(deleteBtn)
+    Wrapper.appendChild(completedBtn)
+
+    todoItem.appendChild(textDiv)
+
+    todoItem.appendChild(Wrapper)
 
     todoList.appendChild(todoItem);
 
+}
 
+// Function for the Filter Buttons actions
+function executeFilterAction(event) {
+    // Fetching the todoList 
+    const todoList = document.getElementById("todoList");
 
+    const element = event.target;
+    const value = element.getAttribute("data-filter")
+    console.log(value);
+    todoList.innerHTML = ''; // Resting the TODOList items
+    const todos = loadTodos(); // Loading all the TodoList items
+
+    // condition for each buttons 
+    if (value == "all") {
+        console.log(todoList);
+        todos.todoList.forEach(todo => {
+            appendTodoInHtml(todo)
+        })
+
+    } else if (value == "pending") {
+        todos.todoList.forEach(todo => {
+            if (todo.isCompleted !== true)
+                appendTodoInHtml(todo)
+        })
+
+    } else {
+
+        todos.todoList.forEach(todo => {
+            if (todo.isCompleted == true)
+                appendTodoInHtml(todo)
+        })
+    }
 
 }
 
@@ -60,6 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // TodoList
     const todoList = document.getElementById("todoList");
 
+    // Fetching All Filter Buttons 
+    const filterBtns = document.getElementsByClassName("filterBtn");
+    console.log(filterBtns);
+    for (const btn of filterBtns) {
+        console.log(btn);
+
+        btn.addEventListener("click", executeFilterAction);
+    }
+
     // click event
     submitButton.addEventListener("click", (event) => {
         const todoText = todoInput.value
@@ -68,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please write something for todos")
         } else {
             // add the todo to the local storage
-            addTodoLocalStorage(todoText);
-            appendTodoInHtml(todoText); // calling the function to Display the Todo List
+            addTodoLocalStorage({ text: todoText, isCompleted: false });
+            appendTodoInHtml({ text: todoText, isCompleted: false }); // calling the function to Display the Todo List
             todoInput.value = '';  // to make values empty
         }
     })
@@ -86,9 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const todos = loadTodos()
 
     todos.todoList.forEach(todo => {
-        const newTodoItem = document.createElement("li");
-        newTodoItem.textContent = todo;
-        todoList.appendChild(newTodoItem);
+        appendTodoInHtml(todo)
     })
 
 }) 

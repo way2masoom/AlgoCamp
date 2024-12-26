@@ -2,8 +2,11 @@
 :root {
     --body-background: #0e0e0f;
     --btn-primary: #5cabff;
-    --btn-secondary:#fffc37;
-    --btn-active:#4a90e2;
+    --btn-secondary: #fffc37;
+    --btn-active: #4a90e2;
+    --btn-edit: #ffd700;
+    --btn-complete: #32cd32;
+    --btn-delete: #ff6347;
 }
 
 * {
@@ -67,7 +70,8 @@ li {
     padding: 10px;
     border: 1px solid#ddd;
 }
-li:hover{
+
+li:hover {
     background-color: antiquewhite;
 }
 
@@ -77,10 +81,13 @@ li:last-child {
 
 
 /* Filter Buttons  */
-.filterBtn{
-   margin: 8px;
-    padding:10px 15px;
-    background-color:var(--btn-secondary) ;
+.filterBtn,
+.editBtn,
+.deleteBtn,
+.completedBtn {
+    margin: 8px;
+    padding: 10px 15px;
+    background-color: var(--btn-secondary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -88,10 +95,32 @@ li:last-child {
     font-size: 12px;
     text-transform: uppercase;
 }
-.filterBtn:hover{
+
+/* Designing filters BTN  */
+.editBtn {
+    background-color: var(--btn-edit);
+}
+
+.deleteBtn {
+    background-color: var(--btn-delete);
+}
+
+.completedBtn {
+    background-color: var(--btn-complete);
+}
+
+.filterBtn:hover {
     background-color: var(--btn-active);
 }
 
-.todoItem{
+.todoItem {
     letter-spacing: 1px;
+}
+
+/* Wrapper Buttons */
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
