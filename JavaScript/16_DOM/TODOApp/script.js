@@ -36,6 +36,57 @@ function addNewTodo() {
     }
 }
 
+// Function to reset HTML TOdo
+function resetHtmlTodos(todos) {
+    const todoList = document.getElementById("todoList");
+    todoList.innerHTML = '';
+    todos.todoList.forEach(todo => {
+        appendTodoInHtml(todo);
+    })
+}
+
+// Function for complete Todo
+function toggleTodo(event) {
+    const todoItem = event.target.parentElement.parentElement;
+    const todoId = todoItem.getAttribute("data-id");
+    const todos = loadTodos();
+    todos.todoList.forEach(todo => {
+        if (todo.id == todoId) {
+            todo.isCompleted = !todo.isCompleted;
+        }
+    });
+    refreshTodos(todos);
+    resetHtmlTodos(todos);
+
+}
+
+// Function to edit the Todo
+function editTodo(event) {
+    const todoItem = event.target.parentElement.parentElement;
+    const todoId = todoItem.getAttribute("data-id");
+    const todos = loadTodos();
+    const response = prompt("Enter new Todo you want to set");
+
+    todos.todoList.forEach(todo => {
+        if (todo.id == todoId) {
+            todo.text = response;
+        }
+    });
+
+    refreshTodos(todos);
+    resetHtmlTodos(todos);
+}
+
+//Function to Delete TODO
+function deleteTodo(event) {
+    const todoItem = event.target.parentElement.parentElement;
+    const todoId = todoItem.getAttribute("data-id");
+    let todos = loadTodos();
+    todos.todoList = todos.todoList.filter(todo => todo.id != todoId);
+    refreshTodos(todos);
+    resetHtmlTodos(todos);
+}
+
 // Function to append intoHTML
 function appendTodoInHtml(todo) {
     const todoList = document.getElementById("todoList");
@@ -89,57 +140,6 @@ function appendTodoInHtml(todo) {
 
     todoList.appendChild(todoItem);
 
-}
-
-// Function to reset HTML TOdo
-function resetHtmlTodos(todos) {
-    const todoList = document.getElementById("todoList");
-    todoList.innerHTML = '';
-    todos.todoList.forEach(todo => {
-        appendTodoInHtml(todo);
-    })
-}
-
-// Function for complete Todo
-function toggleTodo(event) {
-    const todoItem = event.target.parentElement.parentElement;
-    const todoId = todoItem.getAttribute("data-id");
-    const todos = loadTodos();
-    todos.todoList.forEach(todo => {
-        if (todo.id == todoId) {
-            todo.isCompleted = !todo.isCompleted;
-        }
-    });
-    refreshTodos(todos);
-    resetHtmlTodos(todos);
-
-}
-
-// Function to edit the Todo
-function editTodo(event) {
-    const todoItem = event.target.parentElement.parentElement;
-    const todoId = todoItem.getAttribute("data-id");
-    const todos = loadTodos();
-    const response = prompt("Enter new Todo you want to set");
-
-    todos.todoList.forEach(todo => {
-        if (todo.id == todoId) {
-            todo.text = response;
-        }
-    });
-
-    refreshTodos(todos);
-    resetHtmlTodos(todos);
-}
-
-//Function to Delete TODO
-function deleteTodo(event) {
-    const todoItem = event.target.parentElement.parentElement;
-    const todoId = todoItem.getAttribute("data-id");
-    let todos = loadTodos();
-    todos.todoList = todos.todoList.filter(todo => todo.id != todoId);
-    refreshTodos(todos);
-    resetHtmlTodos(todos);
 }
 
 // Function for the Filter Buttons actions
