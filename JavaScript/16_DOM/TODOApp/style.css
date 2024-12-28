@@ -99,14 +99,29 @@ li:last-child {
 /* Designing filters BTN  */
 .editBtn {
     background-color: var(--btn-edit);
+    transition: background-color 0.3s;
+}
+
+.editBtn:hover {
+    background-color: #8957f9;
 }
 
 .deleteBtn {
     background-color: var(--btn-delete);
+    transition: background-color 0.3s;
+}
+
+.deleteBtn:hover {
+    background-color: var(--btn-active);
 }
 
 .completedBtn {
     background-color: var(--btn-complete);
+    transition: background-color 0.3s;
+}
+
+.completedBtn:hover {
+    background-color: var(--btn-active);
 }
 
 .filterBtn:hover {
@@ -118,9 +133,14 @@ li:last-child {
 }
 
 /* Wrapper Buttons */
-.todoItem{
+.todoItem {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
