@@ -34,13 +34,36 @@ body {
     box-shadow: 0 0 1rem rgb(0, 0, 0.3);
     font-size: 9vmin;
     color: #b0413e;
+    background-color: #ffffc7;
 }
 
-#reset-btn{
+#reset-btn {
     background-color: #191913;
     color: #ffff;
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: 1rem;
     border: none;
+}
+
+#new-btn {
+    background-color: #191913;
+    color: #ffff;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+.msg-container {
+    margin-bottom: 4rem;
+}
+
+.hide{
+    display: none;
 }
